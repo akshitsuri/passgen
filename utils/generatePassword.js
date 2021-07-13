@@ -15,8 +15,8 @@ const fetchPassword = (length, chars) => {
 const generatePassword = (length = 8, hasNumbers = true, hasSymbols = true) => {
   let chars = alpha;
 
-  if (hasNumbers) char += numbers;
-  if (hasSymbols) char += symbols;
+  if (hasNumbers) chars += numbers;
+  if (hasSymbols) chars += symbols;
 
   return fetchPassword(length, chars);
 };
