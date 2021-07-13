@@ -1,4 +1,6 @@
 const program = require("commander");
+const chalk = require("chalk");
+const clipboardy = require("clipboardy");
 const generatePassword = require("./utils/generatePassword");
 
 //adding version and description
@@ -17,4 +19,4 @@ const { numbers, symbols, save, length } = program.opts();
 
 //generate password
 const password = generatePassword(length, numbers, symbols);
-console.log(password);
+console.log(chalk.blue("Generated password:"), chalk.bold(password));
